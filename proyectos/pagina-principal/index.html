@@ -13,15 +13,25 @@
     <!-- Navegacion -->
     <header>
         <nav class="container">
-            <div class="logo">Ronald Garavito zapata</div>
-            <ul>
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#blandas">habilidad blandas</li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
+            <div class="nav-pill">
+                <div class="logo">Ronald Garavito zapata</div>
+
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#blandas">Habilidades blandas</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <div class="lang-select" aria-hidden="true">
+                        <span class="flag"></span>
+                    </div>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙 Oscuro</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -35,17 +45,26 @@
                 Buscando contribuir a proyectos innovadores que hagan un impacto real.
             </p>
             <div class="cta-buttons"> 
-               <a href="/assets/cv-ronald.pdf" download class="btn btn-primary">📄 Descargar CV</a>          
+               <a href="/assets/cv ronald.pdf" download class="btn btn-primary">📄 Descargar CV</a>          
                 <a href="#contact" class="btn btn-secondary">Contáctame</a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/ronaldgaravito" title="GitHub">🐙</a>
-                <a href="https://www.linkedin.com/in/ronald-garavito-0320b927a/" title="LinkedIn">💼</a>
-                <a href="mailto:ronaldgaravito687@gmail.com" title="Email">✉️</a>
+                <a href="https://github.com/ronaldgaravito" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ronald-garavito-0320b927a/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg height="16" width="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                </a>
+                <a href="mailto:ronaldgaravito687@gmail.com" title="Email" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4"><title>Mail Icon</title><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </a>
+                <a href="https://discord.com/users/743498264816517150" title="Discord" aria-label="Discord" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path fill="currentColor" d="M60.104 4.552A58.2 58.2 0 0046.852.5a41.13 41.13 0 00-1.917 4.063 52.42 52.42 0 00-14.666 0A41.13 41.13 0 0028.352.5 58.2 58.2 0 0015.048 4.552C4.714 18.586 1.46 31.5 2.628 44.117 16.388 49.37 29.626 49.014 43.502 45.8 57.376 49.014 70.614 49.37 84.374 44.117 85.542 31.5 82.288 18.586 71.954 4.552zM26.49 37.3c-3.22 0-5.86-2.95-5.86-6.57 0-3.62 2.6-6.57 5.86-6.57 3.26 0 5.9 2.95 5.86 6.57 0 3.62-2.6 6.57-5.86 6.57zm18.96 0c-3.22 0-5.86-2.95-5.86-6.57 0-3.62 2.6-6.57 5.86-6.57 3.26 0 5.9 2.95 5.86 6.57 0 3.62-2.6 6.57-5.86 6.57z"/></svg>
+                </a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="/proyectos/pagina-principal/images/ronaldgara.jpg" alt="2025 Ronald Garavito zapata">
+            <img src="/proyectos/pagina-principal/images/ronaldgara.jpg" alt="2025 Ronald Garavito zapata"style="max-width:280px;width:100%;height:auto;border-radius:12px;border:2px solid #334155;display:block;margin:0 auto;">
         </div>
     </section>
 
@@ -232,6 +251,15 @@
             alert('Gracias por tu mensaje. Pronto me pondré en contacto contigo.');
             this.reset();
         });
+        // Theme toggle handler
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                // update button text and icon
+                themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️ Blanco' : '🌙 Oscuro';
+            });
+        }
     </script>
 </body>
 </html>
