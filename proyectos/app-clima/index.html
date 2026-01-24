@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App del Clima | Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌤️ App del Clima</h1>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </header>
+
+        <!-- Buscador -->
+        <div class="search-container">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="Buscar ciudad..." 
+                    autocomplete="off"
+                >
+                <button id="search-btn" class="btn-search">🔍</button>
+                <button id="location-btn" class="btn-location" title="Usar mi ubicación">📍</button>
+            </div>
+        </div>
+
+        <!-- Ciudades populares -->
+        <div class="popular-cities">
+            <button class="city-btn" data-city="Bogotá">Bogotá</button>
+            <button class="city-btn" data-city="Madrid">Madrid</button>
+            <button class="city-btn" data-city="New York">New York</button>
+            <button class="city-btn" data-city="Tokyo">Tokyo</button>
+            <button class="city-btn" data-city="London">London</button>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Cargando clima...</p>
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="error hidden">
+            <span class="error-icon">!</span>
+            <p id="error-message">Ciudad no encontrada</p>
+        </div>
+
+        <!-- Clima actual -->
+        <div id="weather-container" class="weather-container hidden">
+            <!-- Info principal -->
+            <div class="weather-main">
+                <div class="weather-icon" id="weather-icon">☀️</div>
+                <div class="weather-temp">
+                    <span id="temperature">--</span>
+                    <span class="temp-unit">°C</span>
+                </div>
+                <div class="weather-description" id="description">--</div>
+                <div class="weather-location">
+                    <span id="city-name">--</span>, 
+                    <span id="country">--</span>
+                </div>
+                <div class="weather-date" id="current-date">--</div>
+            </div>
+
+            <!-- Detalles -->
+            <div class="weather-details">
+                <div class="detail-card">
+                    <span class="detail-icon">🌡️</span>
+                    <span class="detail-label">Sensación</span>
+                    <span class="detail-value" id="feels-like">--°C</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-label">Humedad</span>
+                    <span class="detail-value" id="humidity">--%</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">💨</span>
+                    <span class="detail-label">Viento</span>
+                    <span class="detail-value" id="wind">-- km/h</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">👁️</span>
+                    <span class="detail-label">Visibilidad</span>
+                    <span class="detail-value" id="visibility">-- km</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">⬇️</span>
+                    <span class="detail-label">Presión</span>
+                    <span class="detail-value" id="pressure">-- hPa</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">🌅</span>
+                    <span class="detail-label">Amanecer</span>
+                    <span class="detail-value" id="sunrise">--:--</span>
+                </div>
+            </div>
+
+            <!-- Temperaturas min/max -->
+            <div class="temp-range">
+                <div class="temp-min">
+                    <span>⬇️ Mín</span>
+                    <span id="temp-min">--°C</span>
+                </div>
+                <div class="temp-max">
+                    <span>⬆️ Máx</span>
+                    <span id="temp-max">--°C</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pronóstico 5 días -->
+        <div id="forecast-container" class="forecast-container hidden">
+            <h2>📅 Pronóstico 5 días</h2>
+            <div class="forecast-grid" id="forecast-grid">
+                <!-- Se llena con JavaScript -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Desarrollado por <strong>Ronald Garavito</strong> | Datos de OpenWeatherMap</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
