@@ -7,29 +7,31 @@
     <link rel="image" href="/proyectos/images/ronaldgara.jpg">
     <meta name="description" content="Portafolio profesional de Ronald Garavito zapata - Ingeniero de Sistemas">
     <meta name="theme-color" content="#0f172a">
-    <title>Ronald Garavito zapata - Ingeniero de Sistemas</title>
+    <title>Ronald Garavito zapata | Ingeniero de Sistemas</title>
    
 <body>
-    <!-- Navegacion -->
-    <header>
+    <!-- Navegación -->
+    <header id="navbar">
         <nav class="container">
             <div class="nav-pill">
-                <div class="logo">Ronald Garavito zapata</div>
+                <a href="#hero" class="logo">Ronald Garavito</a>
 
-                <ul class="nav-links">
-                    <li><a href="#hero">Inicio</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#blandas">Habilidades blandas</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero" class="nav-link active" data-section="hero">Inicio</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">Sobre Mí</a></li>
+                    <li><a href="#blandas" class="nav-link" data-section="blandas">Habilidades Blandas</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contacto</a></li>
                 </ul>
 
                 <div class="nav-controls">
-                    <div class="lang-select" aria-hidden="true">
-                        <span class="flag"></span>
-                    </div>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙 Oscuro</button>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+                        <span class="hamburger"></span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -57,9 +59,6 @@
                 </a>
                 <a href="mailto:ronaldgaravito687@gmail.com" title="Email" aria-label="Email">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4"><title>Mail Icon</title><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                </a>
-                <a href="https://discord.com/users/743498264816517150" title="Discord" aria-label="Discord" target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path fill="currentColor" d="M60.104 4.552A58.2 58.2 0 0046.852.5a41.13 41.13 0 00-1.917 4.063 52.42 52.42 0 00-14.666 0A41.13 41.13 0 0028.352.5 58.2 58.2 0 0015.048 4.552C4.714 18.586 1.46 31.5 2.628 44.117 16.388 49.37 29.626 49.014 43.502 45.8 57.376 49.014 70.614 49.37 84.374 44.117 85.542 31.5 82.288 18.586 71.954 4.552zM26.49 37.3c-3.22 0-5.86-2.95-5.86-6.57 0-3.62 2.6-6.57 5.86-6.57 3.26 0 5.9 2.95 5.86 6.57 0 3.62-2.6 6.57-5.86 6.57zm18.96 0c-3.22 0-5.86-2.95-5.86-6.57 0-3.62 2.6-6.57 5.86-6.57 3.26 0 5.9 2.95 5.86 6.57 0 3.62-2.6 6.57-5.86 6.57z"/></svg>
                 </a>
             </div>
         </div>
@@ -99,12 +98,12 @@
         <div class="container">
             <h2>Habilidades Blandas</h2>
             <div class="habilidades">
-                <div class="habilidad">💬 Comunicación Efectiva</div>
-                <div class="habilidad">👥 Trabajo en Equipo</div>
-                <div class="habilidad">🔧 Resolución de Problemas</div>
-                <div class="habilidad">⏰ Gestión del Tiempo</div>
-                <div class="habilidad">🧠 Pensamiento Crítico</div>
-                <div class="habilidad">📄 Conocimientos en LaTeX</div>
+                <div class="habilidad"> Comunicación Efectiva</div>
+                <div class="habilidad"> Trabajo en Equipo</div>
+                <div class="habilidad"> Resolución de Problemas</div>
+                <div class="habilidad"> Gestión del Tiempo</div>
+                <div class="habilidad"> Pensamiento Crítico</div>
+                <div class="habilidad"> Conocimientos en LaTeX</div>
             </div>
         </div>
     </section>
@@ -251,15 +250,7 @@
             alert('Gracias por tu mensaje. Pronto me pondré en contacto contigo.');
             this.reset();
         });
-        // Theme toggle handler
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('light-mode');
-                // update button text and icon
-                themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️ Blanco' : '🌙 Oscuro';
-            });
-        }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
