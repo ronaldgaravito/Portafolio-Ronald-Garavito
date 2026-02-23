@@ -1,4 +1,8 @@
 
+// ===== CONFIGURATION =====
+const API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza esto con tu API Key de OpenWeatherMap https://openweathermap.org/api
+const API_BASE_URL = 'https://api.openweathermap.org/data/2.5';
+
 // ===== ELEMENTOS DEL DOM =====
 const elements = {
     cityInput: document.getElementById('city-input'),
@@ -68,6 +72,15 @@ function showWeather() {
     elements.forecastContainer.classList.remove('hidden');
 }
 
+// ===== CHECK API KEY =====
+function checkApiKey() {
+    if (API_KEY === 'TU_API_KEY_AQUI') {
+        showError('Falta la API Key. Por favor configura tu API Key en script.js');
+        return false;
+    }
+    return true;
+}
+
 // ===== FORMATEAR FECHA =====
 function formatDate(timestamp) {
     const date = new Date(timestamp * 1000);
@@ -94,10 +107,11 @@ function getDayName(timestamp) {
 
 // ===== OBTENER CLIMA POR CIUDAD =====
 async function getWeatherByCity(city) {
+    if (!checkApiKey()) return;
     showLoading();
     
     try {
-        const response = await fetch(`${API_BASE_URL}/ciudad/${encodeURIComponent(city)}`);
+        const response = await fetch(`${API_BASE_URL}/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric&lang=es`);
         
         if (!response.ok) {
             throw new Error('Ciudad no encontrada');
@@ -115,10 +129,11 @@ async function getWeatherByCity(city) {
 
 // ===== OBTENER CLIMA POR COORDENADAS =====
 async function getWeatherByCoords(lat, lon) {
+    if (!checkApiKey()) return;
     showLoading();
     
     try {
-        const response = await fetch(`${API_BASE_URL}/coordenadas?lat=${lat}&lon=${lon}`);
+        const response = await fetch(`${API_BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`);
         
         if (!response.ok) {
             throw new Error('Error al obtener el clima');
@@ -137,7 +152,7 @@ async function getWeatherByCoords(lat, lon) {
 // ===== OBTENER PRONÓSTICO =====
 async function getForecast(city) {
     try {
-        const response = await fetch(`${API_BASE_URL}/pronostico/${encodeURIComponent(city)}`);
+        const response = await fetch(`${API_BASE_URL}/forecast?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric&lang=es`);
         
         if (response.ok) {
             const data = await response.json();
@@ -150,7 +165,7 @@ async function getForecast(city) {
 
 async function getForecastByCoords(lat, lon) {
     try {
-        const response = await fetch(`${API_BASE_URL}/pronostico/coordenadas?lat=${lat}&lon=${lon}`);
+        const response = await fetch(`${API_BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`);
         
         if (response.ok) {
             const data = await response.json();
@@ -190,7 +205,8 @@ function displayForecast(data) {
     
     data.list.forEach(item => {
         const date = new Date(item.dt * 1000).toDateString();
-        if (!dailyData[date]) {
+        // Solo tomamos un pronóstico por día (prefiriendo el del mediodía)
+        if (!dailyData[date] || item.dt_txt.includes("12:00:00")) {
             dailyData[date] = item;
         }
     });
