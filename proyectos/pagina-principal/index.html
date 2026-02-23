@@ -21,22 +21,24 @@
             <div class="nav-pill">
                 <a href="#hero" class="logo">Ronald Garavito</a>
 
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#hero" class="nav-link active" data-section="hero">Inicio</a></li>
-                    <li><a href="#about" class="nav-link" data-section="about">Sobre Mí</a></li>
-                    <li><a href="#blandas" class="nav-link" data-section="blandas">Habilidades Blandas</a></li>
-                    <li><a href="#skills" class="nav-link" data-section="skills">Habilidades</a></li>
-                    <li><a href="#projects" class="nav-link" data-section="projects">Proyectos</a></li>
-                    <li><a href="#contact" class="nav-link" data-section="contact">Contacto</a></li>
-                </ul>
+                <div class="nav-main">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#hero" class="nav-link active" data-section="hero" data-i18n="nav-home">Inicio</a></li>
+                        <li><a href="#about" class="nav-link" data-section="about" data-i18n="nav-about">Sobre Mí</a></li>
+                        <li><a href="#blandas" class="nav-link" data-section="blandas" data-i18n="nav-soft-skills">Habilidades Blandas</a></li>
+                        <li><a href="#skills" class="nav-link" data-section="skills" data-i18n="nav-skills">Habilidades</a></li>
+                        <li><a href="#projects" class="nav-link" data-section="projects" data-i18n="nav-projects">Proyectos</a></li>
+                        <li><a href="#contact" class="nav-link" data-section="contact" data-i18n="nav-contact">Contacto</a></li>
+                    </ul>
 
-                <div class="nav-controls">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-                        <span class="theme-icon">🌙</span>
-                    </button>
-                    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
-                        <span class="hamburger"></span>
-                    </button>
+                    <div class="nav-controls">
+                        <button id="lang-toggle" class="theme-toggle" aria-label="Cambiar idioma">
+                            <span class="theme-icon">🇺🇸</span>
+                        </button>
+                        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+                            <span class="hamburger"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -46,15 +48,15 @@
     <section id="hero" class="hero container">
         <canvas id="particles-canvas"></canvas>
         <div class="hero-content">
-            <h1>Hola, soy <span class="highlight-text">Ronald</span></h1>
-            <p class="title">Ingeniero de Sistemas</p>
-            <p>
+            <h1 data-i18n="hero-greeting">Hola, soy <span class="highlight-text">Ronald</span></h1>
+            <p class="title" data-i18n="hero-title">Ingeniero de Sistemas</p>
+            <p data-i18n="hero-description">
                 Apasionado por el desarrollo y la resolución de problemas.  
                 Buscando contribuir a proyectos innovadores que hagan un impacto real.
             </p>
             <div class="cta-buttons"> 
-               <a href="/assets/cv ronald.pdf" download class="btn btn-primary">📄 Descargar CV</a>          
-                <a href="#contact" class="btn btn-secondary">Contáctame</a>
+               <a href="/assets/cv ronald.pdf" download class="btn btn-primary" data-i18n="hero-cv">📄 Descargar CV</a>          
+                <a href="#contact" class="btn btn-secondary" data-i18n="hero-contact">Contáctame</a>
             </div>
             <div class="social-links">
                 <a href="https://github.com/ronaldgaravito" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
@@ -76,20 +78,19 @@
     <!-- Descripcion Section -->
     <section id="about">
         <div class="container">
-            <h2>Sobre Mí</h2>
+            <h2 data-i18n="about-h2">Sobre Mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about-p1">
                         Soy estudiante de Ingeniería de Sistemas con pasión por el desarrollo de software. 
                         Durante mi formación académica, he adquirido sólidos conocimientos en programación, 
-                       y solucion de problemas.
+                        y solucion de problemas.
                     </p>
-                    <p>
+                    <p data-i18n="about-p2">
                         Me especializo en crear metodos y eficientes que resuelven 
                         problemas reales. Me encanta aprender nuevas tecnologías.  
-                       
                     </p>
-                    <p>
+                    <p data-i18n="about-p3">
                         Busco una oportunidad para aplicar mis conocimientos en un equipo dinámico donde 
                         pueda contribuir al desarrollo de software de calidad y continuar creciendo 
                         profesionalmente.
@@ -103,7 +104,7 @@
     <!-- Certificaciones -->
     <section id="certificaciones">
         <div class="container">
-            <h2>Certificaciones</h2>
+            <h2 data-i18n="certs-h2">Certificaciones</h2>
             <div class="cert-carousel">
                 <div class="cert-card">
                     <h3>Java Programming</h3>
@@ -134,15 +135,15 @@
         <div class="container stats-grid">
             <div class="stat-item">
                 <span class="stat-number" data-target="10">0</span>+
-                <p>Proyectos</p>
+                <p data-i18n="stat-projects">Proyectos</p>
             </div>
             <div class="stat-item">
                 <span class="stat-number" data-target="3">0</span>
-                <p>Años de Estudio</p>
+                <p data-i18n="stat-years">Años de Estudio</p>
             </div>
             <div class="stat-item">
                 <span class="stat-number" data-target="100">0</span>%
-                <p>Compromiso</p>
+                <p data-i18n="stat-commitment">Compromiso</p>
             </div>
         </div>
     </section>
@@ -155,9 +156,9 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Ingeniería de Sistemas</h3>
-                        <span class="date">Actualidad</span>
-                        <p>Estudiante activo, enfocado en desarrollo de software y arquitectura de sistemas.</p>
+                        <h3 data-i18n="timeline-title">Ingeniería de Sistemas</h3>
+                        <span class="date" data-i18n="timeline-date">Actualidad</span>
+                        <p data-i18n="timeline-description">Estudiante activo, enfocado en desarrollo de software y arquitectura de sistemas.</p>
                     </div>
                 </div>
                 <!-- Agrega más items aquí si es necesario -->
@@ -168,32 +169,26 @@
     <!-- Habilidades Blandas -->
     <section id="blandas">
         <div class="container">
-            <h2>Habilidades Blandas</h2>
+            <h2 data-i18n="soft-skills-h2">Habilidades Blandas</h2>
             <div class="habilidades">
-                <div class="habilidad"> Comunicación Efectiva</div>
-                <div class="habilidad"> Trabajo en Equipo</div>
-                <div class="habilidad"> Resolución de Problemas</div>
-                <div class="habilidad"> Gestión del Tiempo</div>
-                <div class="habilidad"> Pensamiento Crítico</div>
-                <div class="habilidad"> Conocimientos en LaTeX</div>
+                <div class="habilidad" data-i18n="soft-skill-1"> Comunicación Efectiva</div>
+                <div class="habilidad" data-i18n="soft-skill-2"> Trabajo en Equipo</div>
+                <div class="habilidad" data-i18n="soft-skill-3"> Resolución de Problemas</div>
+                <div class="habilidad" data-i18n="soft-skill-4"> Gestión del Tiempo</div>
+                <div class="habilidad" data-i18n="soft-skill-5"> Pensamiento Crítico</div>
             </div>
         </div>
     </section>
 
-    <section id="latex-demo">
-        <div class="container text-center">
-            <h2>Un ejemplo de mis habilidades en LaTeX</h2>
-            <a href="/assets/TrabajoFisica.pdf" download class="btn btn-primary">📄 Descargar PDF</a>
-        </div>
-    </section>
+
 
     <!-- herramientas Section -->
     <section id="skills">
         <div class="container">
-            <h2>Habilidades Técnicas</h2>
+            <h2 data-i18n="skills-h2">Habilidades Técnicas</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Lenguajes de Programación</h3>
+                    <h3 data-i18n="skill-cat-1">Lenguajes de Programación</h3>
                     <ul>
                         <li>JavaScript </li>
                         <li>Python</li>
@@ -202,22 +197,21 @@
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Frontend</h3>
+                    <h3 data-i18n="skill-cat-2">Frontend</h3>
                     <ul>
                         <li>HTML5 / CSS3</li>
                         <li>React</li>
-                
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Backend & Bases de Datos</h3>
+                    <h3 data-i18n="skill-cat-3">Backend & Bases de Datos</h3>
                     <ul>                    
                         <li> MySQL</li>
                         <li>REST APIs</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Herramientas & DevOps</h3>
+                    <h3 data-i18n="skill-cat-4">Herramientas & DevOps</h3>
                     <ul>
                         <li>Git / GitHub</li>
                         <li>Docker</li>
@@ -232,20 +226,20 @@
     <!-- proyectos -->
     <section id="projects">
         <div class="container">
-            <h2>Proyectos Destacados</h2>
+            <h2 data-i18n="projects-h2">Proyectos Destacados</h2>
             
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="java">Java / Backend</button>
-                <button class="filter-btn" data-filter="web">Web / Frontend</button>
+                <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Todos</button>
+                <button class="filter-btn" data-filter="java" data-i18n="filter-java">Java / Backend</button>
+                <button class="filter-btn" data-filter="web" data-i18n="filter-web">Web / Frontend</button>
             </div>
 
             <div class="projects-grid">
                 <div class="project-card" data-category="java">
                     <div class="project-image">📦</div>
                     <div class="project-content">
-                        <h3>Sistema de Gestión de Inventarios</h3>
-                        <p>
+                        <h3 data-i18n="proj1-title">Sistema de Gestión de Inventarios</h3>
+                        <p data-i18n="proj1-desc">
                             Aplicación web completa para gestionar inventarios con base de datos, 
                             reportes y autenticación de usuarios.
                         </p>
@@ -255,7 +249,7 @@
                             <span class="tag">Spring Boot</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">Ver Detalles →</a>
+                            <a href="#" data-i18n="proj-details">Ver Detalles →</a>
                             <a href="https://github.com/ronaldgaravito/Portafolio-Ronald-Garavito.git">GitHub</a>
                         </div>
                     </div>
@@ -264,8 +258,8 @@
                 <div class="project-card" data-category="web">
                     <div class="project-image">✅</div>
                     <div class="project-content">
-                        <h3>Aplicación Web de Tareas</h3>
-                        <p>
+                        <h3 data-i18n="proj2-title">Aplicación Web de Tareas</h3>
+                        <p data-i18n="proj2-desc">
                             Gestor de tareas intuitivo con JavaScript vanilla, almacenamiento local 
                             y interfaz responsiva.
                         </p>
@@ -275,8 +269,28 @@
                             <span class="tag">CSS3</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">Ver Detalles →</a>
+                            <a href="#" data-i18n="proj-details">Ver Detalles →</a>
                             <a href="https://github.com/ronaldgaravito/Portafolio-Ronald-Garavito.git">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">🌦️</div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj3-title">Aplicación del Clima</h3>
+                        <p data-i18n="proj3-desc">
+                            Consulta el clima de cualquier ciudad en tiempo real utilizando una API externa. 
+                            Interfaz dinámica y moderna.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Fetch API</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../app-clima/index.html" data-i18n="proj3-link">Ver Proyecto →</a>
+                            <a href="https://github.com/ronaldgaravito/Portafolio-Ronald-Garavito/tree/main/proyectos/app-clima">GitHub</a>
                         </div>
                     </div>
                 </div>       
@@ -287,14 +301,14 @@
     <!-- contactos -->
     <section id="contact">
         <div class="container">
-            <h2>Ponte en Contacto</h2>
+            <h2 data-i18n="contact-h2">Ponte en Contacto</h2>
             <div class="contact-content">
-                <p>¿Tienes un proyecto en mente o deseas colaborar? ¡Me encantaría escucharte!</p>
+                <p data-i18n="contact-p">¿Tienes un proyecto en mente o deseas colaborar? ¡Me encantaría escucharte!</p>
                 <form class="contact-form">
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <textarea placeholder="Tu mensaje" required></textarea>
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <input type="text" placeholder="Tu nombre" required data-i18n-placeholder="placeholder-name">
+                    <input type="email" placeholder="Tu email" required data-i18n-placeholder="placeholder-email">
+                    <textarea placeholder="Tu mensaje" required data-i18n-placeholder="placeholder-message"></textarea>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact-button">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
@@ -303,8 +317,8 @@
     <!-- Derechos -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ronald Garavito. Todos los derechos reservados.</p>
-            <p>Estudiante de Ingeniería de Sistemas.</p>
+            <p data-i18n="copyright">&copy; 2025 Ronald Garavito. Todos los derechos reservados.</p>
+            <p data-i18n="footer-tagline">Estudiante de Ingeniería de Sistemas.</p>
         </div>
     </footer>
 

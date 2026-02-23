@@ -1,6 +1,6 @@
 
 // ===== CONFIGURATION =====
-const API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza esto con tu API Key de OpenWeatherMap https://openweathermap.org/api
+const API_KEY = 'e8b47c21d15e6fee9dab924c14fed3e1'; // Reemplaza esto con tu API Key de OpenWeatherMap https://openweathermap.org/api
 const API_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // ===== ELEMENTOS DEL DOM =====

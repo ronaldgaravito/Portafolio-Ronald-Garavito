@@ -97,6 +97,13 @@ body.light-mode #navbar {
   opacity: 0.8;
 }
 
+/* Nav Main Group */
+.nav-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Nav Links */
 .nav-links {
   display: flex;
@@ -486,21 +493,24 @@ section h2 {
 
 /* Soft Skills Section */
 .habilidades {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
 .habilidad {
-  background: var(--secondary);
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
   padding: 1.5rem;
   border-radius: 0.75rem;
   text-align: center;
-  color: var(--text);
+  color: var(--text-primary);
   font-weight: 600;
   transition: all 0.3s ease;
   font-size: 1rem;
+  min-width: 250px;
+  flex: 0 1 auto;
 }
 
 .habilidad:hover {
@@ -509,11 +519,6 @@ section h2 {
   color: var(--accent);
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
-}
-.habilidad:last-child {
-  grid-column: 1 / -1;
-  max-width: 200px;
-  margin: 0 auto;
 }
 
 /* Projects Section */
