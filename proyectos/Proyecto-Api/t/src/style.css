@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --bg-deep: #0f172a;
+  --bg-surface: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Base Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
